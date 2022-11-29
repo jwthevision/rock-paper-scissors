@@ -1,7 +1,7 @@
 console.log('Hello World!');
 
 function getComputerChoice() {
-    
-    const choices = ['Rock', 'Paper', 'Scissors']
-    let getComputerChoice = choices[Math.floor(Math.random() * choices.length)]
+    let rps = ['rock', 'paper', 'scissors'];
+    let random = rps[Math.floor(Math.random() * rps.length)];
+    return random;
 }
