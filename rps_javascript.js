@@ -24,3 +24,7 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+const computerSelection = getComputerChoice();
+const playerSelection = prompt("Choose your weapon");
+console.log(computerSelection)
+console.log(playRound(playerSelection, computerSelection));
