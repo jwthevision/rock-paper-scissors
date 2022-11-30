@@ -1,4 +1,4 @@
-console.log('Hello World!');
+//console.log('Hello World!');
 
 function getComputerChoice() {
     let rps = ['rock', 'paper', 'scissors'];
@@ -25,6 +25,7 @@ function playRound(playerSelection, computerSelection) {
 }
 
 const computerSelection = getComputerChoice();
-const playerSelection = prompt("Choose your weapon");
+let playerSelection = prompt("Choose your weapon");
+playerSelection = playerSelection.toLowerCase();
 console.log(computerSelection)
 console.log(playRound(playerSelection, computerSelection));
