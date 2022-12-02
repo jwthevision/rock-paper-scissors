@@ -29,3 +29,27 @@ let playerSelection = prompt("Choose your weapon");
 playerSelection = playerSelection.toLowerCase();
 console.log(computerSelection)
 console.log(playRound(playerSelection, computerSelection));
+
+function game() {
+    let playerScore = 0;
+    let computerScore = 0;
+    let roundResult = computerPlay();
+
+    for (let counter = 0; counter <= 5; ++counter) {
+        computerPlay();
+
+        if (roundResult === "You win, rock beats scissors" || roundResult === "You win, paper beats rock." || roundResult === "You win, scissors beats paper.") {
+            ++playerScore;
+        } else if (roundResult === "You lose, paper beats rock." || roundResult === "You lose, scissors beats paper." || roundResult === "You lose, rock beats scissors.") {
+            ++computerScore
+        }
+    }
+
+    if (playerScore > computerScore) {
+        return ("You win " + playerScore + " to " + computerScore + '.');
+    } else if (playerScore < computerScore) {
+        return ("You lose " + computerScore + " to " + playerScore + '.');
+    } else {
+        return "It was a tie, you and the computer won the same number of rounds.^u^";
+        }
+}
